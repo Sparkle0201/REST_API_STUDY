@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kr.test.paper.mapper.PaperMapper">
+    <insert id="insertaa" parameterType="com.kr.test.paper.model.PaperVO">
+        /* paper.insertaa */
+        INSERT INTO test.test_table(name) VALUES(#{name})
+    </insert>
+</mapper>
