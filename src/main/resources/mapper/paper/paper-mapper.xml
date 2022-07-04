@@ -2,8 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.kr.test.paper.mapper.PaperMapper">
-    <insert id="insertaa" parameterType="com.kr.test.paper.model.PaperVO">
-        /* paper.insertaa */
+    <insert id="insert" parameterType="com.kr.test.paper.model.PaperVO">
+        /* paper.insert */
         INSERT INTO test.test_table(name) VALUES(#{name})
     </insert>
+
+    <select id="select" resultType="org.json.simple.JSONObject">
+        /* paper.select*/
+        SELECT id,name FROM test.test_table WHERE id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.kr.test.paper.model.PaperVO">
+        UPDATE test.test_table SET name=#{name} WHERE id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="com.kr.test.paper.model.PaperVO">
+        DELETE FROM test.test_table WHERE id=#{id}
+    </delete>
 </mapper>

@@ -5,6 +5,8 @@ import com.kr.test.paper.model.PaperVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PaperService {
 
@@ -13,9 +15,20 @@ public class PaperService {
 
     public void insert(PaperVO vo) {
 
-        System.out.println("test");
-        paperMapper.insertaa(vo);
-
+        paperMapper.insert(vo);
     }
 
+    public List<PaperVO> select(String id) {
+
+        return paperMapper.select(id);
+    }
+
+    public void update(String id, String name) {
+
+        paperMapper.update(id, name);
+    }
+
+    public void delete(String id) {
+        paperMapper.delete(id);
+    }
 }
