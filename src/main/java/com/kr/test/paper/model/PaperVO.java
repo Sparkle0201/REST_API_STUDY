@@ -8,5 +8,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class PaperVO {
+
+    
     private String name;
 }
