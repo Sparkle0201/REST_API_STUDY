@@ -38,6 +38,5 @@ public class PaperController { //PaperController 클래스
     public void deleteTest(@PathVariable String id){ //void타입의 deleteTest메소드임 @PathVariable을 사용하여 URI에 변수를 넣어줌
         paperService.delete(id); // PaperService클래스의 delete 매소드에 id 매개변수를 넘겨줌.
 
-
     }
 }
